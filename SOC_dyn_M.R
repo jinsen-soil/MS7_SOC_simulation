@@ -1,11 +1,12 @@
-# this is an example of the model structure constructured for Mbeya site.
+# this is an example of the model structure constructed for Mbeya site.
+# for the details of the conceptual model please refer to Clivot et al. 2019.
 
 SOC.dyn.M <- function(time, stocks, parms) {
   with(as.list(c(stocks, parms)), {
     # define fluxes
     
     # C input through root
-    root_input.0N <- avg.root_in_M.0N
+    root_input.0N <- avg.root_in_M.0N # root biomass calculated with field-measured shoot-root ratio and above-ground biomass
     root_input.50N <- avg.root_in_M.50N
     root_input.50NR <- avg.root_in_M.50NR
     root_input.100N <- avg.root_in_M.100N
